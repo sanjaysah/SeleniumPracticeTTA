@@ -13,8 +13,10 @@ public class ShadowDOM {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        WebElement usernameInput = (WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('input#kils')");
-        WebElement PizzaInput = (WebElement) js.executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
+        WebElement usernameInput = (WebElement) js
+                .executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('input#kils')");
+        WebElement PizzaInput = (WebElement) js
+                .executeScript("return document.querySelector('div#userName').shadowRoot.querySelector('div#app2').shadowRoot.querySelector('input#pizza')");
 
         usernameInput.sendKeys("Username");
         PizzaInput.sendKeys("Cheese Burst Tandoori FullHouse");
